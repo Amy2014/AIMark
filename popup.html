@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+        width: 240px;
+        padding: 12px;
+        font: 13px/1.4 ui-sans-serif, system-ui, sans-serif;
+        color: #fff;
+        background: #0a0f1a;
+      }
+      p {
+        margin: 0 0 10px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      button {
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+        height: 32px;
+        border-radius: 8px;
+        border: 1px solid rgba(98, 155, 253, 0.4);
+        background: #152034;
+        color: #fff;
+        cursor: pointer;
+      }
+      button.primary {
+        background: #629bfd;
+        border-color: #629bfd;
+        color: #fff;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .err {
+        color: #fda4af;
+        min-height: 1.2em;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="status">正在检查当前页…</p>
+    <button type="button" id="toggle" class="primary">开启</button>
+    <button type="button" id="copy" disabled>复制全部</button>
+    <div class="err" id="err"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
